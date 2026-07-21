@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout>
+    <Navigation />
+
+    <main class="projects">
+
+        <h1>Projects</h1>
+
+        <p>
+            A collection of embedded software and firmware
+            projects I've worked on.
+        </p>
+        <ProjectCard
+            title="Pulse Oximeter"
+            subtitle="ESP32-C6 • FreeRTOS • MAX30102"
+            description="Firmware for the pulse oximeter subsystem of the SAMD sleep apnea monitoring device."
+            status="In Progress"
+            image="/images/oxi_and_esp.jpg"
+            github="https://github.com/Laurirai/Pulse_oximeter"
+            link="/projects/pulse-oximeter"
+/>
+    </main>
+</Layout>
+
+<style>
+
+.projects{
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+
+.projects h1{
+    font-size: 3rem;
+}
+
+</style>

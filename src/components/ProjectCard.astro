@@ -1,0 +1,200 @@
+---
+const {
+    title,
+    subtitle,
+    description,
+    status,
+    image,
+    github,
+    link
+} = Astro.props;
+---
+
+<div class="card">
+
+    <img src={image} alt={title} />
+
+    <div class="content">
+
+        <h2>{title}</h2>
+
+        <p class="subtitle">{subtitle}</p>
+
+        <p>{description}</p>
+
+        <p class="statusLine">
+            Status:
+            <span class={`status ${status.toLowerCase().replace(" ", "-")}`}>
+                {status}
+            </span>
+        </p>
+
+        <div class="buttons">
+
+            <a href={link} class="button">
+                Read More
+            </a>
+
+            <a
+                href={github}
+                target="_blank"
+                class="button secondary">
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+
+.card{
+
+    display:flex;
+
+    gap:30px;
+
+    align-items:center;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    margin:35px 0;
+
+    transition:.2s;
+
+}
+
+.card:hover{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card img{
+
+    width:220px;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    background:#efefef;
+
+}
+
+.content{
+
+    flex:1;
+
+}
+
+.subtitle{
+
+    color:#666;
+
+    margin-bottom:15px;
+
+}
+
+.statusLine{
+
+    margin-top:20px;
+
+}
+
+.status{
+
+    margin-left:10px;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:.9rem;
+
+    font-weight:bold;
+
+}
+
+.completed{
+
+    background:#d4edda;
+
+    color:#155724;
+
+}
+
+.in-progress{
+
+    background:#fff3cd;
+
+    color:#856404;
+
+}
+
+.planned{
+
+    background:#d1ecf1;
+
+    color:#0c5460;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.button{
+
+    text-decoration:none;
+
+    background:#1f5cff;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    transition:.2s;
+
+}
+
+.button:hover{
+
+    background:#1848cc;
+
+}
+
+.secondary{
+
+    background:white;
+
+    color:#1f5cff;
+
+    border:1px solid #1f5cff;
+
+}
+
+.secondary:hover{
+
+    background:#f5f8ff;
+
+}
+</style>

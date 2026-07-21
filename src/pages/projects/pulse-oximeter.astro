@@ -1,0 +1,263 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+---
+
+<Layout>
+
+    <Navigation />
+
+    <main class="project">
+
+    <h1>Pulse Oximeter</h1>
+
+    <p class="subtitle">
+        ESP32-C6 • FreeRTOS • MAX30102
+    </p>
+
+    <img
+        src="/images/oxi_and_esp.jpg"
+        alt="Pulse Oximeter Hardware"
+    />
+
+    <section>
+
+        <h2>Overview</h2>
+
+        <p>
+            This project is part of the SAMD (Sleep Apnea Monitoring Device)
+            project. The firmware is responsible for collecting pulse and
+            blood oxygen data using the MAX30102 sensor.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Objective</h2>
+
+        <p>
+            Placeholder text.
+
+            Explain what problem this project solves,
+            why it exists,
+            and what role it plays in the larger system.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Hardware</h2>
+
+        <ul>
+
+            <li>ESP32-C6</li>
+
+            <li>MAX30102 Optical Sensor</li>
+
+            <li>I²C Communication</li>
+
+            <li>USB Power</li>
+
+        </ul>
+
+        <p>
+            Placeholder description of the hardware setup.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Software</h2>
+
+        <ul>
+
+            <li>FreeRTOS Tasks</li>
+
+            <li>Sensor Driver</li>
+
+            <li>Sampling Logic</li>
+
+            <li>Data Processing</li>
+
+        </ul>
+
+        <p>
+            Placeholder software architecture description.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Challenges</h2>
+
+        <ul>
+
+            <li>Placeholder challenge</li>
+
+            <li>Placeholder challenge</li>
+
+            <li>Placeholder challenge</li>
+
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Gallery</h2>
+
+        <div class="gallery">
+
+            <img src="/images/oxi_and_esp.jpg" alt="Gallery image">
+
+            <img src="/images/oxi_and_esp.jpg" alt="Gallery image">
+
+            <img src="/images/oxi_and_esp.jpg" alt="Gallery image">
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Lessons Learned</h2>
+
+        <ul>
+
+            <li>Placeholder lesson</li>
+
+            <li>Placeholder lesson</li>
+
+            <li>Placeholder lesson</li>
+
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Repository</h2>
+
+        <a
+            href="https://github.com/Laurirai/Pulse_oximeter"
+            target="_blank">
+
+            View Project on GitHub
+
+        </a>
+
+    </section>
+
+</main>
+
+</Layout>
+
+<style>
+
+.project{
+
+    max-width:900px;
+
+    margin:80px auto;
+
+    padding:0 30px 80px;
+
+}
+
+.subtitle{
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    margin-bottom:40px;
+
+}
+
+section{
+
+    margin-top:40px;
+
+}
+
+section h2{
+
+    margin-bottom:15px;
+
+}
+
+section{
+
+    margin-top:60px;
+
+    padding-top:20px;
+
+    border-top:1px solid #e5e5e5;
+
+}
+
+section h2{
+
+    margin-bottom:20px;
+
+}
+
+section p{
+
+    line-height:1.7;
+
+}
+
+ul{
+
+    padding-left:25px;
+
+    line-height:1.8;
+
+}
+
+.gallery{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.gallery img{
+
+    width:260px;
+
+    border-radius:10px;
+
+}
+
+a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}
+
+</style>
