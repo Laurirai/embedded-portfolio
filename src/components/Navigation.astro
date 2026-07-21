@@ -8,26 +8,38 @@
     </ul>
 </nav>
 <style>
-nav {
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px 40px;
+nav{
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    padding:30px 60px;
+
+    gap:35px;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+nav ul{
+
+    display:flex;
+    list-style:none;
+
+    gap:35px;
+
+    margin:0;
+    padding:0;
 }
 
-nav a {
-    text-decoration: none;
-    color: black;
+nav a{
+
+    color:var(--text);
+
+    transition:.2s;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover{
+
+    color:var(--accent);
+
 }
 </style>
