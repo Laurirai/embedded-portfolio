@@ -1,0 +1,187 @@
+---
+interface Props {
+    title: string;
+    studio: string;
+    year: string;
+    description: string;
+    rating: string;
+    genres: string[];
+    image: string;
+    link: string;
+}
+
+const {
+    title,
+    studio,
+    year,
+    description,
+    rating,
+    genres,
+    image,
+    link
+} = Astro.props;
+---
+
+<div class="card">
+
+    <img src={image} alt={title} />
+
+    <div class="content">
+
+        <h2>{title}</h2>
+
+        <p class="subtitle">
+            {studio} • {year}
+        </p>
+
+        <p>
+            {description}
+        </p>
+
+        <div class="bottom">
+
+            <div class="left">
+
+                <span class="rating">
+                    {rating}
+                </span>
+
+                <div class="genres">
+
+                    {genres.map((genre) => (
+
+                        <span>{genre}</span>
+
+                    ))}
+
+                </div>
+
+            </div>
+
+            <a href={link}>
+                Read Review →
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+
+.card{
+
+    display:flex;
+
+    gap:35px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-bottom:35px;
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:var(--accent);
+
+}
+
+img{
+
+    width:280px;
+
+    object-fit:cover;
+
+}
+
+.content{
+
+    padding:30px;
+
+    flex:1;
+
+}
+
+.subtitle{
+
+    color:var(--muted);
+
+    margin-top:-5px;
+
+}
+
+.bottom{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+}
+
+.rating{
+
+    display:inline-block;
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+
+}
+
+.genres{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.genres span{
+
+    padding:7px 14px;
+
+    background:#282828;
+
+    border-radius:999px;
+
+    border:1px solid var(--border);
+
+    font-size:.9rem;
+
+}
+
+a{
+
+    color:var(--accent);
+
+    font-weight:bold;
+
+}
+
+</style>

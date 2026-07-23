@@ -1,45 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
+import ReviewCard from '../components/ReviewCard.astro';
 ---
 
 <Layout>
 
     <Navigation />
 
-    <main class="page">
+    <main class="reviews">
 
         <h1>Game Reviews</h1>
 
         <p>
-            Outside of embedded software,
-            I enjoy exploring games and writing
-            about what makes them memorable.
+
+            Games that left a lasting impression on me.
+
+            These aren't professional reviews—just my personal thoughts after finishing games that I think are worth talking about.
+
         </p>
 
-        <section>
+        <ReviewCard
 
-            <h2>Coming Soon</h2>
+            title="Elden Ring"
 
-            <p>
+            studio="FromSoftware"
 
-                Planned reviews:
+            year="2022"
 
-            </p>
+            description="The game that completely changed how I viewed video games."
 
-            <ul>
+            rating="9.5 / 10"
 
-                <li>Outer Wilds</li>
+            genres={["Soulslike","Open World","RPG"]}
 
-                <li>Cyberpunk 2077</li>
+            image="/images/reviews/eldenring.jpg"
 
-                <li>Dark Souls</li>
+            link="/reviews/elden-ring"
 
-                <li>Subnautica</li>
-
-            </ul>
-
-        </section>
+        />
 
     </main>
 
@@ -47,19 +46,25 @@ import Navigation from '../components/Navigation.astro';
 
 <style>
 
-.page{
+.reviews{
 
-    max-width:900px;
+    max-width:1000px;
 
     margin:80px auto;
 
-    padding:0 30px 80px;
+}
+
+.reviews h1{
+
+    font-size:3rem;
 
 }
 
-section{
+.reviews>p{
 
-    margin-top:50px;
+    margin-bottom:50px;
+
+    max-width:700px;
 
 }
 

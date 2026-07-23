@@ -18,16 +18,25 @@ const {
 
         <h2>{title}</h2>
 
-        <p class="subtitle">{subtitle}</p>
+        <div class="tags">
+
+            {subtitle.split(" • ").map((tag) => (
+
+                <span>{tag}</span>
+
+            ))}
+
+        </div>
 
         <p>{description}</p>
 
-        <p class="statusLine">
-            Status:
+        <div class="statusLine">
+
             <span class={`status ${status.toLowerCase().replace(" ", "-")}`}>
                 {status}
             </span>
-        </p>
+
+        </div>
 
         <div class="buttons">
 
@@ -56,39 +65,53 @@ const {
 
     display:flex;
 
-    gap:30px;
+    gap:40px;
 
     align-items:center;
 
-    border:1px solid #ddd;
+    background:var(--card);
 
-    border-radius:12px;
+    border:1px solid var(--border);
 
-    padding:25px;
+    border-radius:20px;
 
-    margin:35px 0;
+    padding:35px;
 
-    transition:.2s;
+    margin:40px 0;
+
+    transition:.25s;
 
 }
 
 .card:hover{
 
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-color:var(--accent);
+
+    transform:translateY(-4px);
 
 }
 
 .card img{
 
-    width:220px;
+    width:280px;
 
-    height:160px;
+    height:190px;
 
     object-fit:cover;
 
-    border-radius:10px;
+    border-radius:14px;
 
-    background:#efefef;
+    border:2px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.card:hover img{
+
+    border-color:var(--accent);
+
+    transform:scale(1.02);
 
 }
 
@@ -98,55 +121,91 @@ const {
 
 }
 
+.content h2{
+
+    margin:0;
+
+    font-size:2rem;
+
+}
+
 .subtitle{
 
-    color:#666;
+    color:var(--muted);
 
-    margin-bottom:15px;
+    margin:18px 0;
+
+    font-size:1rem;
+
+}
+
+.tags{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin:18px 0;
+
+}
+
+.tags span{
+
+    padding:8px 16px;
+
+    background:var(--bg);
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    font-size:.95rem;
 
 }
 
 .statusLine{
 
-    margin-top:20px;
+    margin-top:25px;
+
+    font-size:1rem;
 
 }
 
 .status{
 
-    margin-left:10px;
+    margin-left:12px;
 
-    padding:5px 10px;
+    padding:8px 16px;
 
-    border-radius:20px;
+    border-radius:999px;
 
-    font-size:.9rem;
-
-    font-weight:bold;
+    font-weight:600;
 
 }
 
 .completed{
 
-    background:#d4edda;
+    background:#25492d;
 
-    color:#155724;
+    color:#9ef2aa;
 
 }
 
 .in-progress{
 
-    background:#fff3cd;
+    background:#3b2b15;
 
-    color:#856404;
+    color:#ffd66b;
 
 }
 
 .planned{
 
-    background:#d1ecf1;
+    background:#1c324d;
 
-    color:#0c5460;
+    color:#88d4ff;
 
 }
 
@@ -154,9 +213,9 @@ const {
 
     display:flex;
 
-    gap:15px;
+    gap:18px;
 
-    margin-top:25px;
+    margin-top:30px;
 
 }
 
@@ -164,37 +223,45 @@ const {
 
     text-decoration:none;
 
-    background:#1f5cff;
+    color:var(--text);
 
-    color:white;
+    border:2px solid var(--accent);
 
-    padding:10px 18px;
+    border-radius:12px;
 
-    border-radius:8px;
+    padding:14px 28px;
 
-    transition:.2s;
+    transition:.25s;
 
 }
 
 .button:hover{
 
-    background:#1848cc;
+    transform:translateY(-2px);
+
+}
+
+.button:first-child{
+
+    background:var(--accent);
+
+}
+
+.button:first-child:hover{
+
+    background:var(--accent-hover);
 
 }
 
 .secondary{
 
-    background:white;
-
-    color:#1f5cff;
-
-    border:1px solid #1f5cff;
+    background:transparent;
 
 }
 
 .secondary:hover{
 
-    background:#f5f8ff;
+    background:rgba(160,90,255,.15);
 
 }
 </style>

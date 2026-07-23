@@ -11,10 +11,11 @@ import ProjectCard from '../components/ProjectCard.astro';
 
         <h1>Projects</h1>
 
-        <p>
+        <p class="intro">
             A collection of embedded software and firmware
             projects I've worked on.
         </p>
+
         <ProjectCard
             title="Pulse Oximeter"
             subtitle="ESP32-C6 • FreeRTOS • MAX30102"
@@ -23,20 +24,42 @@ import ProjectCard from '../components/ProjectCard.astro';
             image="/images/oxi_and_esp.jpg"
             github="https://github.com/Laurirai/Pulse_oximeter"
             link="/projects/pulse-oximeter"
-/>
+        />
+
     </main>
+
 </Layout>
 
 <style>
 
 .projects{
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 0 30px;
+
+    max-width:1000px;
+
+    margin:80px auto;
+
+    padding:0 40px;
+
 }
 
 .projects h1{
-    font-size: 3rem;
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.intro{
+
+    color:var(--muted);
+
+    margin-bottom:50px;
+
+    max-width:700px;
+
+    font-size:1.1rem;
+
 }
 
 </style>
