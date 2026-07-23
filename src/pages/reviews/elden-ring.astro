@@ -1,32 +1,271 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navigation from '../../components/Navigation.astro';
+import Layout from "../../layouts/Layout.astro";
+import Navigation from "../../components/Navigation.astro";
 ---
 
 <Layout>
+  <Navigation />
 
-<Navigation/>
+  <main class="review">
+    <h1>Elden Ring</h1>
 
-<main class="review">
+    <div class="info">
+      <p><strong>Platform:</strong> PC</p>
+      <p><strong>First Playthrough:</strong> 2022 • 120 hrs</p>
+      <p><strong>DLC:</strong> 2024 • 35 hrs</p>
+      <p><strong>Genre:</strong> Action RPG / Soulslike</p>
+      <p>
+        <strong>Recommended for:</strong> Players who enjoy exploration and challenging
+        combat.
+      </p>
+    </div>
 
-<h1>Elden Ring</h1>
+    <h2>First Impressions</h2>
 
-<p>
-Review coming soon...
-</p>
+    <p>
+      I thought I'd start here since it's one of my favourite games of all
+      time... A masterpiece of world-building that redefined what open-world
+      RPGs could be, even if its size eventually works against it.
+    </p>
 
-</main>
+    <h2>Atmosphere & World</h2>
+
+    <p>
+      The atmosphere is what's driving the Souls games and this one nails it.
+      You can feel the history woven into the world by George R. R. Martin. You
+      can see the hints of his earlier books in the game. As with many of
+      Martin's stories, several important character names even share his
+      initials. It's a fun little detail, even if it isn't something I
+      particularly care about.
+    </p>
+
+    <p>
+      Going through the Lands Between is scary, but in the good kind. You are
+      always learning something new, getting some new equipment or getting
+      closure or the next steps to a questline. There's always something more.
+      And even when you think that there isn't, the game takes your jaw and
+      pulls it to the ground.
+    </p>
+
+    <p>
+      And that is much to do with the artwork of the game. The game feels like
+      you are stepping inside of a painting. Everything is meticulously curated
+      to the last sand grain.
+    </p>
+
+    <h2>Content & Replayability</h2>
+
+    <p>
+      Elden Ring is the most "gamey" of all the Souls games because of the sheer
+      amount of side content and repeated content. That, for me, doesn't bring
+      the game up or down—it just means there's more game to play.
+    </p>
+
+    <p>
+      That also makes the game less repeatable than the other Souls games
+      because of my completionist personality.
+    </p>
+
+    <p>
+      I've played through the game a couple of times, including the DLC, but
+      even with how much I love the game, I cannot start a new journey. There's
+      just so much content that starting a new playthrough is scary and takes a
+      lot, a LOT of time.
+    </p>
+
+    <p>For a first playthrough, Elden Ring feels like every gamer's dream.</p>
+
+    <h2>Combat</h2>
+
+    <p>
+      The amount of content actually hits the player in the end game. You can
+      love something all you want, but if you repeat the same pattern every day,
+      for several hours, you'll grow tired, get bored, and eventually even end
+      up disliking the whole thing.
+    </p>
+
+    <p>And I have to say, Elden Ring can feel a bit like that.</p>
+
+    <p>
+      The combat mechanics of the game, whilst satisfying, can get samey after
+      around 150 hours of gameplay.
+    </p>
+
+    <h2>Music & DLC</h2>
+
+    <p>Have to mention the score somewhere.</p>
+
+    <p>
+      I think this was one of the weakest parts of the main game, but it is
+      completely turned around in the DLC. The DLC gives three of my favourite
+      Souls tracks of all time.
+    </p>
+
+    <p>
+      Also worth noting, I think most of the best stuff in the game comes from
+      the DLC. This is not to say that the main game is weak in any way, but
+      rather that the DLC is definitely the strongest part.
+    </p>
+
+    <p>From the bosses, world design, questlines and the score.</p>
+
+    <p>
+      For repeated playthroughs, however, the DLC can be a bit rough. Gathering
+      the Scadutree Fragments all over the world is fine on the first go around,
+      but can become a bit tedious on the second.
+    </p>
+
+    <h2>Final Thoughts</h2>
+
+    <p>If you like RPG's as much as I do, this game is a no-brainer.</p>
+
+    <p>
+      And even if you don't, I'd still recommend it, as long as you aren't
+      completely new to gaming.
+    </p>
+
+    <p>
+      The game is hard. Belonging to the Souls genre, there's no question about
+      it. And I think it's the biggest hurdle for new players.
+    </p>
+
+    <p>
+      But if you've got the persistence, this game will open your eyes to the
+      game industry as a whole.
+    </p>
+
+    <p>
+      Games don't need to be as hand-holdy as Ubisoft makes them. They become
+      more special when you get to figure out the basic mechanics and what to do
+      in the world by yourself.
+    </p>
+
+    <p>How you want to approach the problems is the slogan of the game.</p>
+
+    <h2>Ratings</h2>
+
+    <div class="ratings">
+      <div class="rating">
+        <h3>Player's Rating</h3>
+
+        <span>9.5 / 10</span>
+      </div>
+
+      <div class="rating">
+        <h3>Engineering Perspective</h3>
+
+        <span>6 / 10</span>
+      </div>
+    </div>
+
+    <section class="again">
+      <h2>Would I Play It Again?</h2>
+
+      <p>Yes—but not anytime soon.</p>
+    </section>
+  </main>
+</Layout>
 
 <style>
+  .review {
+    max-width: 900px;
 
-.review{
+    margin: 80px auto;
 
-    max-width:900px;
+    padding: 0 30px;
+  }
 
-    margin:80px auto;
+  .review h1 {
+    font-size: 3rem;
 
-}
+    margin-bottom: 10px;
+  }
 
+  .review h2 {
+    margin-top: 60px;
+
+    margin-bottom: 20px;
+  }
+
+  .review p {
+    line-height: 1.8;
+
+    font-size: 1.08rem;
+  }
+
+  .info {
+    display: inline-block;
+
+    padding: 20px 28px;
+
+    margin: 25px 0 50px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--card);
+  }
+
+  .info p {
+    margin: 8px 0;
+
+    font-size: 1rem;
+  }
+
+  .ratings {
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 30px;
+  }
+
+  .rating {
+    flex: 1;
+
+    padding: 20px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--card);
+
+    text-align: center;
+  }
+
+  .rating h3 {
+    margin-top: 0;
+  }
+
+  .rating span {
+    font-size: 1.8rem;
+
+    color: var(--accent);
+
+    font-weight: bold;
+  }
+
+  .again {
+    margin-top: 40px;
+
+    padding: 18px 24px;
+
+    border-left: 4px solid var(--accent);
+
+    background: var(--card);
+
+    border-radius: 10px;
+  }
+
+  .again h2 {
+    margin: 0 0 10px;
+
+    font-size: 1.4rem;
+  }
+
+  .again p {
+    margin: 0;
+  }
 </style>
-
-</Layout>
